@@ -12,7 +12,9 @@ jobs:
         run: |
             apt update
             apt install devscripts debhelper build-essential fakeroot git -y
-            apt install libwayland-dev libxkbcommon-dev libpixman-1-dev libxcb1-dev libxcb-util-dev libxcb-ewmh-dev libxcb-keysyms1-dev libinput-dev libegl1-mesa-dev -y
+            apt install  libxcb1-dev  libxcb-keysyms1-dev libinput-dev libegl1-mesa-dev -y
+            apt install libfontconfig-dev libpixman-1-dev librm-dev libwayland-dev -y
+            apt install wayland-protocols libxkbcommon-dev libxcb-util-dev libxcb-composite0-dev libxcb-ewmh-dev  libxcb-icccm4-dev
             git clone --depth=1 https://github.com/michaelforney/wld
             git clone --depth=1 https://github.com/michaelforney/swc
             git clone --depth=1 https://github.com/michaelforney/velox
