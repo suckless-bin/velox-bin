@@ -18,20 +18,21 @@ jobs:
             git clone --depth=1 https://github.com/michaelforney/wld
             git clone --depth=1 https://github.com/michaelforney/swc
             git clone --depth=1 https://github.com/michaelforney/velox
+            mkdir -p $GITHUB_WORKSPACE/pkgs
             cd wld
             make
-            make DESTDIR=/tmp/pkgs install
+            make DESTDIR=$GITHUB_WORKSPACE/pkgs install
             make install
             cd ..
             cd swc
             make 
             make install
-            make DESTDIR=/tmp/pkgs install
+            make DESTDIR=$GITHUB_WORKSPACE/pkgs install
             cd ..
             cd velox
             make 
-            make DESTDIR=/tmp/pkgs install
-            zip -r velox.zip /tmp/pkgs
+            make DESTDIR=$GITHUB_WORKSPACE/pkgs install
+            zip -r velox.zip $GITHUB_WORKSPACE/pkgs
             upload=$(realpath velox.zip)
             echo "FILES=${upload}" >> $GITHUB_ENV            
             
