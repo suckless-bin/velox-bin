@@ -16,8 +16,8 @@ jobs:
             apt install libfontconfig-dev libpixman-1-dev libdrm-dev libwayland-dev -y
             apt install wayland-protocols libxkbcommon-dev libxcb-util-dev libxcb-composite0-dev libxcb-ewmh-dev  libxcb-icccm4-dev -y
             git clone --depth=1 https://github.com/kzwkt/wld
-            git clone --depth=1 https://github.com/michaelforney/swc
-            git clone --depth=1 https://github.com/michaelforney/velox
+            git clone --depth=1 https://github.com/kzwkt/swc
+            git clone --depth=1 https://github.com/kzwkt/velox
             mkdir -p $GITHUB_WORKSPACE/pkgs
             cd wld
             make
