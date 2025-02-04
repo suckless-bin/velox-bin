@@ -11,7 +11,7 @@ jobs:
       - name: Setup
         run: |
             apt update
-            apt install   gcc  make  git -y
+            apt install   gcc  make  git zip -y
             apt install  libxcb1-dev  libxcb-keysyms1-dev libinput-dev libegl1-mesa-dev -y
             apt install libfontconfig-dev libpixman-1-dev libdrm-dev libwayland-dev -y
             apt install wayland-protocols libxkbcommon-dev libxcb-util-dev libxcb-composite0-dev libxcb-ewmh-dev  libxcb-icccm4-dev -y
