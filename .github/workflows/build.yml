@@ -15,9 +15,9 @@ jobs:
             apt install  libxcb1-dev  libxcb-keysyms1-dev libinput-dev libegl1-mesa-dev -y
             apt install libfontconfig-dev libpixman-1-dev libdrm-dev libwayland-dev -y
             apt install wayland-protocols libxkbcommon-dev libxcb-util-dev libxcb-composite0-dev libxcb-ewmh-dev  libxcb-icccm4-dev -y
-            git clone --depth=1 https://github.com/kzwkt/wld
-            git clone --depth=1 https://github.com/kzwkt/swc
-            git clone --depth=1 https://github.com/kzwkt/velox
+            git clone --depth=1 https://github.com/suckless-bin/wld
+            git clone --depth=1 https://github.com/suckless-bin/swc
+            git clone --depth=1 https://github.com/suckless-bin/velox
             mkdir -p $GITHUB_WORKSPACE/pkgs
             cd wld
             make
